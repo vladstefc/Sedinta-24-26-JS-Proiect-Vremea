@@ -47,11 +47,12 @@
             >
               Alege un alt oraș
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <button class="dropdown-item bucharest">București</button>
+            <ul class="dropdown-menu" id="test" aria-labelledby="dropdownMenuButton1">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <li class="for-drop-down-btn">
+                <button class="dropdown-item bucharest"></button>
               </li>
-              <li>
+              <!-- <li>
                 <button class="dropdown-item timisoara">Timișoara</button>
               </li>
               <li>
@@ -59,7 +60,7 @@
               </li>
               <li>
                 <button class="dropdown-item constanta">Constanta</button>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -85,6 +86,7 @@
           IT School România © 2021. Toate drepturile rezervate.
         </p>
       </div>
+
     </footer>
 
     <script

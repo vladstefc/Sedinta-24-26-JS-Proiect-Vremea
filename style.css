@@ -62,6 +62,13 @@ header {
   flex: 1;
 }
 
+ul {
+  max-height:250px;
+  overflow-y:auto;
+}
+
+
+
 @media (max-width: 576px) {
   .current-weather {
     text-align: center;
