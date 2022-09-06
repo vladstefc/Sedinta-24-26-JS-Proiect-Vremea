@@ -1,7 +1,7 @@
-const bucuresti = document.querySelector('.bucharest');
-const timisoara = document.querySelector('.timisoara');
-const oradea = document.querySelector('.oradea');
-const constanta = document.querySelector('.constanta');
+// const bucuresti = document.querySelector('.bucharest');
+// const timisoara = document.querySelector('.timisoara');
+// const oradea = document.querySelector('.oradea');
+// const constanta = document.querySelector('.constanta');
 
 const selectedCity = document.getElementById('city');
 const localStorageCity = localStorage.getItem('selectedCity');
@@ -19,21 +19,31 @@ const preselectedCity = localStorageCity || selectedCity.innerHTML;
 
 updateCity(preselectedCity);
 
-bucuresti.addEventListener('click', function() {
-    updateCity(this.innerHTML);
+// bucuresti.addEventListener('click', function() {
+//     updateCity(this.innerHTML);
+// })
+
+// timisoara.addEventListener('click', function() {
+//     updateCity(this.innerHTML);
+// });
+
+// oradea.addEventListener('click', function() {
+//     updateCity(this.innerHTML);
+// });
+
+// constanta.addEventListener('click', function() {
+//     updateCity(this.innerHTML);
+// });
+
+const elements = document.querySelectorAll('.dropdown-item');
+
+console.log(elements);
+
+elements.forEach(element => {
+    element.addEventListener('click', function() {
+        updateCity(this.innerHTML);
+    })
 })
-
-timisoara.addEventListener('click', function() {
-    updateCity(this.innerHTML);
-});
-
-oradea.addEventListener('click', function() {
-    updateCity(this.innerHTML);
-});
-
-constanta.addEventListener('click', function() {
-    updateCity(this.innerHTML);
-});
 
 
 
