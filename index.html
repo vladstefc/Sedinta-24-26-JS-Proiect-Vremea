@@ -17,6 +17,10 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -48,7 +52,7 @@
               Alege un alt oraș
             </button>
             <ul class="dropdown-menu" id="test" aria-labelledby="dropdownMenuButton1">
-              <input class="input" type="text" placeholder="Cauta oraș" id="myInput" onkeyup="filterFunction()">
+              <input class="input" type="text" placeholder="Caută oraș" id="myInput" onkeyup="filterFunction()">
               <li class="for-drop-down-btn">
                 <button class="dropdown-item bucharest"></button>
               </li>
@@ -71,13 +75,20 @@
         </div>
       </section>
     </main>
+
+    <button id="scroll-to-top">
+      <span class="material-icons">
+        keyboard_double_arrow_up
+        </span>
+        
+     </button>
+
     <footer class="bg-dark">
       <div class="container">
         <p class="text-light text-center m-0 py-3">
           IT School România © 2021. Toate drepturile rezervate.
         </p>
       </div>
-
     </footer>
 
     <script
@@ -89,6 +100,7 @@
     <script src="./utils/date.js"></script>
     <script src="./utils/weather.js"></script>
     <script src="./utils/citiesconst.js"></script>
+    <script src="./utils/scrollToTop.js"></script>
     <script src="./sections/CurrentWeather.js"></script>
     <script src="./sections/ForecastWeather.js"></script>
     <script src="./sections/ChooseLocation.js"></script>

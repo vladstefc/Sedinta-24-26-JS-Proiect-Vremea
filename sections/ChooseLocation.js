@@ -4,7 +4,7 @@ const selectedCity = document.getElementById("city");
 const localStorageCity = localStorage.getItem("selectedCity");
 console.log(localStorageCity);
 
-function dropdownCities() {
+(function dropdownCities() {
   for (i = 0; i < listOfCities.length; i++) {
     let optn = listOfCities[i];
     let el = document.createElement("button");
@@ -13,9 +13,9 @@ function dropdownCities() {
     list.appendChild(el);
     el.classList.add("dropdown-item");
   }
-}
+})();
 
-dropdownCities();
+// dropdownCities();
 
 function updateCity(city) {
   localStorage.setItem("selectedCity", city);
@@ -23,7 +23,7 @@ function updateCity(city) {
   selectedCity.innerHTML = city;
   displayCurrentWeather(city);
   displayForecastWeather(city);
-}
+};
 
 const preselectedCity = localStorageCity || selectedCity.innerHTML;
 
@@ -36,6 +36,7 @@ Object.values(elements).forEach((element) => {
     updateCity(this.innerHTML);
   });
 });
+
 
 function filterFunction() {
   let input, filter, ul, li, a, i;
