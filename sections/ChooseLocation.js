@@ -31,9 +31,10 @@ const elements = document.querySelectorAll(".dropdown-item");
 Object.values(elements).forEach((element) => {
   element.addEventListener("click", function () {
     updateCity(this.innerHTML);
+    document.getElementById("myInput").value = '';
+    filterFunction();
   });
 });
-
 
 function filterFunction() {
   let input, filter, ul, li, a, i;
@@ -50,6 +51,3 @@ function filterFunction() {
     }
   }
 };
-
-
-
