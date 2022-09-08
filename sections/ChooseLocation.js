@@ -2,7 +2,6 @@ const list = document.querySelector(".for-drop-down-btn");
 
 const selectedCity = document.getElementById("city");
 const localStorageCity = localStorage.getItem("selectedCity");
-console.log(localStorageCity);
 
 (function dropdownCities() {
   for (i = 0; i < listOfCities.length; i++) {
@@ -14,8 +13,6 @@ console.log(localStorageCity);
     el.classList.add("dropdown-item");
   }
 })();
-
-// dropdownCities();
 
 function updateCity(city) {
   localStorage.setItem("selectedCity", city);
@@ -50,7 +47,9 @@ function filterFunction() {
       a[i].style.display = ""; 
     } else {
       a[i].style.display = "none";
-      input.value = "";
     }
   }
 };
+
+
+

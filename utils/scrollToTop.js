@@ -1,7 +1,5 @@
 const scrollToTop = document.getElementById('scroll-to-top');
 
-console.log(window.innerHeight)
-
 document.addEventListener('scroll', function() {
     const scrollValue = window.scrollY;
     
