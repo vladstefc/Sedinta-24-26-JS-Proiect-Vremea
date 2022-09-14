@@ -16,7 +16,6 @@ function displayCurrentWeather(city) {
         const weatherIcon = getWeatherIcon(weather[0].icon);
         const temperature = Math.round(main.temp);
 
-        // chooseLoc.innerHTML = weather.weather[0].main;
         const weatherinfo = weather[0].main;
         console.log(weatherinfo)
         
@@ -38,18 +37,6 @@ function displayCurrentWeather(city) {
                 <p class='fs-5'>Vant: <strong>${windSpeed} km/h</strong></p>
             </div>
         `;
-
-        function backgroundChange(weather) {
-            if (weatherinfo === Rain) {
-            chooseLoc.style.backgroundImage = 'url(../day/rain-clouds.jpg)';
-            } else if (weatherinfo === Clouds) {
-            chooseLocchooseLoc.style.backgroundImage = 'url(day/scattered-clouds.jpg)';
-            } else if (weatherinfo === Clear) {
-            chooseLoc.style.backgroundImage = 'url(day/sunny-day.gif)';
-            } else {
-            // document.body.style.backgroundImage= 'url(background.gif)';
-            }
-          }
     })
     .catch(err => {
         console.log(err);
