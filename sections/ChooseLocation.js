@@ -34,17 +34,17 @@ Object.values(elements).forEach((element) => {
 });
 
 function filterFunction() {
-  let input, filter, ul, li, a, i;
+  let input, filter, ul, li, btn, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   div = document.querySelector(".dropdown-menu");
-  a = div.getElementsByTagName("button");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
+  btn = div.getElementsByTagName("button");
+  for (i = 0; i < btn.length; i++) {
+    txtValue = btn[i].textContent || btn[i].innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
+      btn[i].style.display = "";
     } else {
-      a[i].style.display = "none";
+      btn[i].style.display = "none";
     }
   }
 }
